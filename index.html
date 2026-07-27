@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html"><div class="nav-brand">AppPortal</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="changepassword.html">Security</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+    <div class="user-badge">
+      <span>👤</span> Alex Turner
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1 class="page-title">Welcome back, Alex! 👋</h1>
+    <p class="page-subtitle">Here is a quick summary of your updates for today.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Overview</h3>
+        <p style="margin-top: 0.5rem; color: var(--text-muted);">You have completed 85% of your profile setup. Everything is running smoothly.</p>
+        <a href="profile.html" class="btn" style="margin-top: 1rem; text-align: center;">View Profile</a>
+      </div>
+
+      <div class="card">
+        <h3>Notifications</h3>
+        <p style="margin-top: 0.5rem; color: var(--text-muted);">You have 3 unread messages and 2 security updates pending review.</p>
+        <a href="settings.html" class="btn btn-secondary" style="margin-top: 1rem; text-align: center;">Manage Alerts</a>
+      </div>
+
+      <div class="card">
+        <h3>Account Security</h3>
+        <p style="margin-top: 0.5rem; color: var(--text-muted);">Your password was last updated 30 days ago. Keep your account safe.</p>
+        <a href="changepassword.html" class="btn btn-secondary" style="margin-top: 1rem; text-align: center;">Update Password</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

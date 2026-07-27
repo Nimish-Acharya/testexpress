@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html"><div class="nav-brand">AppPortal</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html" class="active">Profile</a></li>
+      <li><a href="settings.html">Settings</a></li>
+      <li><a href="change-password.html">Security</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+    <div class="user-badge">
+      <span>👤</span> Alex Turner
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="card">
+      <div class="profile-header">
+        <div class="avatar">AT</div>
+        <div>
+          <h2>Alex Turner</h2>
+          <p style="color: var(--text-muted);">Software Developer</p>
+        </div>
+      </div>
+
+      <div class="profile-details">
+        <div class="detail-item">
+          <span>Username</span>
+          <strong>@alex_turner</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Email Address</span>
+          <strong>alex.turner@example.com</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Phone Number</span>
+          <strong>+1 (555) 019-2834</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Address</span>
+          <strong>742 Evergreen Terrace, Springfield</strong>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <button class="btn btn-secondary" style="width: auto;">Edit Profile</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

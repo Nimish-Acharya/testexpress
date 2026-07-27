@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html"><div class="nav-brand">AppPortal</div></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="settings.html" class="active">Settings</a></li>
+      <li><a href="change-password.html">Security</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+    <div class="user-badge">
+      <span>👤</span> Alex Turner
+    </div>
+  </nav>
+
+  <main class="container" style="max-width: 700px;">
+    <div class="card">
+      <h2 class="page-title">Account Settings</h2>
+      <p class="page-subtitle">Manage your preference settings.</p>
+
+      <form action="settings.html" method="GET">
+        <!-- Notification Preferences -->
+        <div class="settings-section">
+          <h3>Notification Preferences</h3>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" checked> Email notifications on login
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" checked> Weekly account digest
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox"> Promotional updates
+            </label>
+          </div>
+        </div>
+
+        <!-- Theme Selection -->
+        <div class="settings-section">
+          <h3>Theme Selection</h3>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="theme" value="light" checked> Light Theme
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="theme" value="dark"> Dark Theme
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Save Preferences</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
