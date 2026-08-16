@@ -1,0 +1,26 @@
+{
+  "name": "men-prj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nimish-Acharya/testexpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nimish-Acharya/testexpress/issues"
+  },
+  "homepage": "https://github.com/Nimish-Acharya/testexpress#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "mongodb": "^7.5.0"
+  }
+}
