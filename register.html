@@ -12,7 +12,7 @@
       <h2 class="page-title" style="text-align: center;">Create Account</h2>
       <p class="page-subtitle" style="text-align: center;">Fill out the form below to register.</p>
       
-      <form action="index.html" method="GET">
+      <form method="POST">
         <div class="form-group">
           <label for="fullname">Full Name</label>
           <input type="text" id="fullname" placeholder="Jane Doe" required>
@@ -38,7 +38,7 @@
           <input type="password" id="confirm-password" placeholder="••••••••" required>
         </div>
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn" id="reg">Register</button>
       </form>
 
       <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
@@ -46,6 +46,6 @@
       </p>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="register.js"></script>
 </body>
 </html>
