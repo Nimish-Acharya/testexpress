@@ -2,6 +2,9 @@ const express= require('express');
 const mongo= require('mongodb');
 const bcrypt = require('bcrypt');
 const app= express();
+const session =require('express-session');
+const jwt =require('jsonwebtoken');
+
 
 app.use(express.json());
 app.use(express.static(__dirname));
@@ -45,6 +48,18 @@ async function initializeDB() {
 
 const databaseReady = initializeDB();
 
+app.use(express.json());
+app.use(session({
+secret:'secret',
+resave:false,
+saveUninitialized:true,
+cookie:{
+    secure:false,
+    httpOnly:true,
+    maxAge:1000*60*60*24
+}
+}));
+
 app.post("/CheckCred", async (req, res) => 
 {
     try {
@@ -52,8 +67,14 @@ app.post("/CheckCred", async (req, res) =>
         const { username, password } = req.body || {};
 
         const user = await collection.findOne({ username, password });
+        
+        req.session.user=user;
 
-        res.json({ success: Boolean(user) });
+        const token =jwt.sign({sessionID:req.sessionID},"jwt-secret",{expiresIN:"2h"});
+
+        res.json({ success: Boolean(user),token:token });
+
+       
     } catch (error) {
         console.error("Login error:", error);
         res.status(500).json({ success: false, message: "Unable to log in" });
