@@ -67,7 +67,7 @@ app.post("/CheckCred", async (req, res) =>
         const { username, password } = req.body || {};
 
         const user = await collection.findOne({ username, password });
-        
+
         req.session.user=user;
 
         const token =jwt.sign({sessionID:req.sessionID},"jwt-secret",{expiresIN:"2h"});
@@ -104,6 +104,19 @@ app.post("/register", async (req, res) =>
     } catch (err) {
         console.error("Registration error:", err);
         res.status(500).json({ success: false, message: "Error occurred while registering user" });
+    }
+});
+
+app.get("/chnagepassword", async (req,res)=>
+{
+    try
+    {
+        
+
+    }
+    catch(error)
+    {
+
     }
 });
 

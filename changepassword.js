@@ -9,11 +9,15 @@ button.addEventListener("click",  async function(event){
         alert("  new password and confirm password dont match");
         return;
     }
+    const jsn= fetch("/CheckCred" );
+    const token =jsn.token;
+
     const response =await fetch("/changepassword",
         {
             method:POST,
             headers:{
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
             },
             body: JSON.stringify({
                 currentPassword: CurrPass.value,
